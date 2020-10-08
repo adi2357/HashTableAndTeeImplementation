@@ -84,7 +84,7 @@ public class MyLinkedList<K> {
 	public AllNode deleteTop() {
 		AllNode tempNode = this.head;
 		this.head = head.getNext();
-		System.out.println("Deleted element is :" + tempNode.getKey());
+//		System.out.println("Deleted element is :" + tempNode.getKey());
 		return tempNode;
 	}
 
@@ -94,8 +94,9 @@ public class MyLinkedList<K> {
 			tempNode = tempNode.getNext();
 		}
 		this.tail = tempNode;
+		tail.setNext(null);
 		tempNode = tempNode.getNext();
-		System.out.println("Deleted element is :" + tempNode.getKey());
+//		System.out.println("Deleted element is :" + tempNode.getKey());
 		return tempNode;
 	}
 
@@ -129,13 +130,17 @@ public class MyLinkedList<K> {
 		AllNode deleteNode = search(key);
 		AllNode tempNode = head;
 		if (deleteNode != null) {
-			while (!tempNode.getNext().equals(deleteNode)) {
-				tempNode = tempNode.getNext();
+			if (head.getKey().equals(deleteNode.getKey()))
+				deleteTop();
+			else if (tail.getKey().equals(deleteNode.getKey()))
+				deleteBottom();
+			else {
+				while (!tempNode.getNext().getKey().equals(deleteNode.getKey())) {
+					tempNode = tempNode.getNext();
+				}
+				tempNode.setNext(deleteNode.getNext());
 			}
-			tempNode.setNext(deleteNode.getNext());
-			System.out.println("Element deleted");
-		} else
-			System.out.println("Element not deleted");
+		}
 	}
 
 	public int size() {
