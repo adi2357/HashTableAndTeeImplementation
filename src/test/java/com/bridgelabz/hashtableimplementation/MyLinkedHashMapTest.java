@@ -1,8 +1,10 @@
-package com.bridgrlabz.hashtableandtreeimplementation;
+package com.bridgelabz.hashtableimplementation;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import com.bridgelabz.hashtableimplementation.MyLinkedHashMap;
 
 import junit.framework.Assert;
 

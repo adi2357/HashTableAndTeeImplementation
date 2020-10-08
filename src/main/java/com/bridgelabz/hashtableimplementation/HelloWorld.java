@@ -1,4 +1,4 @@
-package com.bridgrlabz.hashtableandtreeimplementation;
+package com.bridgelabz.hashtableimplementation;
 
 public class HelloWorld {
 	public static void main(String[] args) {

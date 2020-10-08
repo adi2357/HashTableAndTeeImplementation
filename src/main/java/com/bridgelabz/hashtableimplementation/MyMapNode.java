@@ -1,4 +1,4 @@
-package com.bridgrlabz.hashtableandtreeimplementation;
+package com.bridgelabz.hashtableimplementation;
 
 public class MyMapNode<K, V> implements AllNode<K> {
 	K key;

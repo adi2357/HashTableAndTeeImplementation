@@ -1,4 +1,4 @@
-package com.bridgrlabz.hashtableandtreeimplementation;
+package com.bridgelabz.hashtableimplementation;
 
 import java.util.ArrayList;
 

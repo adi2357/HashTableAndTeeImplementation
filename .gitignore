@@ -6,3 +6,4 @@ target/
 .gitattributes
 gradlew
 gradlew.bat
+/.gradle/

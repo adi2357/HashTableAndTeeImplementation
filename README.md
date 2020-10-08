@@ -1,1 +1,1 @@
-# HashTableAndTeeImplementation
+# HashTableImplementation
